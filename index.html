@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+        <!-- <button id="btn">Open Modal!</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close"></span>
+            <p><b>Модальное Окно!</b></p>
+        </div>
+    </div> -->
+
+
+   <button id="openModalBtn" class="btn"><p><b>Открыть Модальное Окно</b></p></button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Модальное Окно </p>
+    </div>
+    </div>
+
+
+
+
+
+    <style>
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .btn{
+        display: flex;
+        width: 150px;
+        height: 80px;
+        /* transform: translateX(680px);
+        transform: translateY(50px); */
+        position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -95px;
+    margin-top: -75px;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+    }
+    
+    .modal-content {
+        background-color: red; 
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #000;
+        width: 350px; 
+        justify-content: center;   
+    }
+    
+    
+    .close {
+        color: orange;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    </style>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+var openModalBtn = document.getElementById("openModalBtn");
+var closeBtn = document.getElementsByClassName("close")[0];
+
+
+function openModal() {
+    modal.style.display = "block";
+}
+
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+
+openModalBtn.onclick = function() {
+    openModal();
+}
+
+
+closeBtn.onclick = function() {
+    closeModal();
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+    
+    
+    
+    
+
+
